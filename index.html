@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+    <meta charset ="UTF-8">
+    <meta http equiv = "X-UA-COMPATIBLE" content ="IE=edge">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    </head>    
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class = "logo">
+                    <ul>
+                        <li><a href="header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>SOFTWARE ENGINEER</p>
+                    <h1>Hi, I'm <br><span>Kaveri Koti</span></h1>
+                    <a href="images/Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+            </div>
+        </div>
+        <!--about-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a Computer Science student at with a passion for software development.
+                            My skills include JavaScript, Python, Java, HTML, CSS, SQL, React, and Node.js. 
+                            I am enthusiastic about leveraging my knowledge to contribute to innovative development teams 
+                            and work on impactful projects. Eager to continuously learn and grow, I am excited to bring my skills 
+                            and passion to dynamic software development roles. I thrive in collaborative environments and 
+                            am dedicated to delivering high-quality, scalable solutions. I am prepared to tackle complex challenges and contribute effectively to any team.</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Software Engineering</span><br>DesignPatterns, Testing</li>
+                                    <li><span>Data Structures</span><br>Stack, Queue, Trees, Graphs and sortings</li>
+                                    <li><span>DAA</span><br>Greedy Algorithms, Dynamic programming</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Dec 2021 - May 2022</span><br>Cyber Security Intern</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Aug 2022 - Current</span><br>Masters</li>
+                                    <li><span>2022</span><br>Bachelors</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web3 Phishing Attacks</h2>
+                <p>
+                    It is a security project aimed at detecting phishing attacks on cryptocurrency exchanges using the forta-agent platform. This project focuses on enhancing the security infrastructure of Web3 applications, particularly those in the cryptocurrency domain, by identifying and mitigating potential phishing threats in real-time using Forta-Agent, JavaScript, Node.js, Ethereum, Web3.js, Solidity, RESTful APIs, Docker.
+     
+                </p>
+            </div>
+            <div>
+                <h2>Yoga Pose Detection</h2>
+                <p>
+                    Yoga pose detection using image processing and classification algorithms like Random Forest involves analyzing visual input to identify different yoga poses. Image processing techniques are used to extract key body points and features from images or video frames. These extracted features are then fed into a Random Forest classifier, which uses multiple decision trees to accurately classify the poses.    
+                </p>
+            </div>
+            <div>
+                <h2>Food Delivery Android Application</h2>
+                <p>
+                    Designed and developed a comprehensive food delivery Android application using Android Studio and Java. Integrated RESTful APIs for real-time order tracking, utilized Firebase for authentication and data storage, and implemented MVVM architecture to ensure maintainability and scalability.
+     
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--portfolio
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/user.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/user.png">
+            </div>
+            <div class="work">
+                <img src="images/user.png">
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>kaverik2328@gmail.com</p>
+                <p>559-942-2324</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/kaveri-koti/">Linkedin</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form> 
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Kevin. Made with Easy Tutorials</p>
+    </div>
+</div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script> 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxJPdzaLjIv2E21gUzA1UOnRhBwkHvtN3ixPfPshRbsXkwOxZQXPhTJIddldfk1ljIx/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML =""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>   
+
+    </body>
+</html>
